@@ -1,0 +1,7 @@
+.createForm {
+  display: grid;
+}
+
+label {
+  margin-right: 10px;
+}

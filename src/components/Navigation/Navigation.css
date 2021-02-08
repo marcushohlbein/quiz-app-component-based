@@ -1,0 +1,5 @@
+.Navigation {
+  display: grid;
+  grid-auto-columns: repeat(4, 1fr);
+  height: 48px;
+}
