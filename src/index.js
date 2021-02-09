@@ -6,7 +6,7 @@ import createElement from './lib/createElement'
 
 const cards = []
 
-const header = Header('Quiz App')
+const { header } = Header('Quiz App')
 
 const navigation = Navigation(onNavigate)
 
@@ -48,10 +48,12 @@ function onNavigate(text) {
   if (text === 'Home') {
     homePage.hidden = false
     createPage.hidden = true
+    header.setText('Home')
   }
 
   if (text === 'Create') {
     homePage.hidden = true
     createPage.hidden = false
+    header.setText('Create Cards')
   }
 }
