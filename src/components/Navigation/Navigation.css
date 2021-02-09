@@ -1,7 +1,7 @@
 .Navigation {
-  display: grid;
-  grid-auto-columns: repeat(4, 1fr);
-  height: 48px;
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
 }
 
 .Navigation > img {
