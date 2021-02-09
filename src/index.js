@@ -1,8 +1,8 @@
 import Header from './components/Header'
-import CreateForm from './components/CreateForm'
 import Navigation from './components/Navigation'
 import createElement from './lib/createElement'
 import HomePage from './components/HomePage'
+import CreatePage from './components/CreatePage'
 
 const cards = []
 
@@ -12,13 +12,7 @@ const navigation = Navigation(onNavigate)
 
 const homePage = HomePage()
 
-const form = CreateForm(onSubmit)
-
-const createPage = createElement(
-  'main',
-  { className: 'CreatePage', hidden: true },
-  form
-)
+const createPage = CreatePage(onSubmit)
 
 const grid = createElement(
   'div',
@@ -39,13 +33,13 @@ function onSubmit(question, answer) {
 function onNavigate(text) {
   if (text === 'Home') {
     homePage.show()
-    createPage.hidden = true
+    createPage.hide()
     header.setText('Home')
   }
 
   if (text === 'Create') {
     homePage.hide()
-    createPage.hidden = false
+    createPage.show()
     header.setText('Create Cards')
   }
 }
