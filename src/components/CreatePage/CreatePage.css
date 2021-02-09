@@ -1,0 +1,5 @@
+.CreatePage {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+}
