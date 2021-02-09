@@ -5,4 +5,14 @@ export default {
   component: Homepage,
 }
 
-export const base = () => Homepage('Quiz App').el
+export const base = () =>
+  Homepage([
+    {
+      question: 'This could be your question',
+      answer: 'This could be your answer',
+    },
+    {
+      question: 'This could be your question',
+      answer: 'This could be your answer',
+    },
+  ]).el
