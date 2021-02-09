@@ -1,7 +1,28 @@
 import Card from './components/Card'
 import Header from './components/Header'
+import Navigation from './components/Navigation/Navigation'
+import createElement from './lib/createElement'
 
-const header = Header('Quiz', 'may the best win!')
-const card = Card('Say your Name', 'Marcus')
+const { el: headerEl, setText: setHeaderText } = Header(
+  'Quiz App',
+  'May the best win!'
+)
 
-document.body.append(header, card)
+const navigation = Navigation(navigate)
+
+function navigate(text) {
+  console.log(text)
+}
+
+const grid = createElement(
+  'div',
+  { className: 'appGrid' },
+  Header('Quiz App', 'May the Best win!'),
+  headerEl,
+  Card('Foo Bar', 'Bar baz!'),
+  navigation
+)
+
+setHeaderText('Create', 'a new card')
+
+document.body.append(grid)
