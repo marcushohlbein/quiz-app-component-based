@@ -7,11 +7,8 @@ import CreatePage from './components/CreatePage'
 const cards = []
 
 const header = Header('Quiz App')
-
 const navigation = Navigation(onNavigate)
-
 const homePage = HomePage()
-
 const createPage = CreatePage(onSubmit)
 
 const grid = createElement(
