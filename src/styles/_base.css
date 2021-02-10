@@ -20,3 +20,21 @@ input,
 button {
   font-size: 1em;
 }
+
+.appGrid {
+  display: grid;
+  grid-template-rows: 58px auto 58px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.app-grid__header {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  background-color: var(--color-bg-primary);
+}
+
+[hidden] {
+  display: none !important;
+}

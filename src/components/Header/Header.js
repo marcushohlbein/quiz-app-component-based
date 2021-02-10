@@ -6,7 +6,7 @@ export default function Header(title) {
 
   setText(title)
 
-  function setText(title, subtitle) {
+  function setText(title) {
     el.innerHTML = `
     <h1 class="Header__title">
       ${title}
